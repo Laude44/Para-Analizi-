@@ -9,11 +9,9 @@ public class ParaAnalizi {
 
     public static void main(String[] args) {
         // Türkçe sayı formatı (virgül ile ondalık) için ayar
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.of("tr", "TR"));
 
-        System.out.println("--- 💰 Para Analizi (Otomatik Tarihli) ---");
-
-        try {
+        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.of("tr", "TR"))) {
+            System.out.println("--- 💰 Para Analizi (Otomatik Tarihli) ---");
             // --- 1. GİRDİLER ---
             System.out.print("💳 Ziraat Bakiyeniz: ");
             double ziraat = scanner.nextDouble();
@@ -87,8 +85,6 @@ public class ParaAnalizi {
 
         } catch (InputMismatchException e) {
             System.out.println("\n❌ HATA: Lütfen sayısal değer giriniz (Örn: 1500,50).");
-        } finally {
-            scanner.close();
         }
     }
 }
