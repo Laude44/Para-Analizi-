@@ -8,7 +8,6 @@ import java.time.format.DateTimeFormatter;
 public class ParaAnalizi {
 
     public static void main(String[] args) {
-        // Türkçe sayı formatı (virgül ile ondalık) için ayar
 
         try (Scanner scanner = new Scanner(System.in).useLocale(Locale.of("tr", "TR"))) {
             System.out.println("--- 💰 Para Analizi (Otomatik Tarihli) ---");
